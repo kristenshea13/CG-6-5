@@ -87,6 +87,20 @@ namespace CG_6_5_Zodiac_Good
         }
 
 
+        private static string Zodiac(string birthMonth, int birthDay)
+        {
+
+
+            if ((birthMonth == "Mar" && birthDay >= 21) || (birthMonth == "Apr" && (birthDay >= 01 || birthDay <= 19)))
+            {
+                string fortune = "Your Zodiac Sign is Aries. \n Fortune: You will trip on your own shoelace tomorrow at Noon.";
+                return fortune;
+            }
+
+            else if ((birthMonth == "Apr" && birthDay >= 20) || (birthMonth == "May" && (birthDay >= 1 || birthDay <= 20)))
+            {
+
+            }
 
 
 
@@ -100,6 +114,5 @@ namespace CG_6_5_Zodiac_Good
 
 
 
-
-    }
+        }
 }
