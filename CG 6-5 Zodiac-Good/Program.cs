@@ -6,16 +6,13 @@ namespace CG_6_5_Zodiac_Good
     {
         static void Main(string[] args)
         {
-            /*
-            * Finally, display their zodiac symbol and a fake fortune for them.You can get the list of zodiac signs and dates, 
-            * as well as a sample, from Bing to an external site.*/
-
+            
             Console.WriteLine("What is your Zodiac sign?");
             Console.WriteLine(); //line break for ease of reading
 
             //prompt for date of birth
             Console.Write("Please enter your date of birth (MM/DD/YYYY): ");
-
+            
             //declare as datetime and name variable, and then convert from string to datetime using parse
             DateTime userBirthdate = DateTime.Parse(Console.ReadLine());
 
@@ -23,10 +20,12 @@ namespace CG_6_5_Zodiac_Good
             Console.WriteLine("You were born on a {0}.", userBirthdate.ToString("dddd"));
 
             DateTime currentdate = DateTime.Now;
-            //assign variable name and type to current date
+            //assign variable name and type to current date for use in if/else if statements below
 
             DateTime nextBDay = new DateTime(currentdate.Year, userBirthdate.Month, userBirthdate.Day);
             //create new datetime variable for birthday in current year to use in if/else if statements below
+
+
 
             //if day of year of your birthday is greater than or equal to current day of year,
             //the day of week will be determined by using current year
@@ -45,12 +44,16 @@ namespace CG_6_5_Zodiac_Good
                 Console.WriteLine("Your next birthday will be on a {0}", nextBDdayofwk.ToString("dddd"));
             }
 
+
+            //had to declare the birthMonth and birthDay variables to use in my method below
+            //used .Month to extract month as an integer
+            //used .Day to extract day as an integer
             var birthMonth = userBirthdate.Month;
             
             var birthDay = userBirthdate.Day;
 
 
-
+            //print zodiac sign and fortune from method below
             Console.WriteLine(Zodiac(birthMonth, birthDay));
 
 
@@ -62,10 +65,17 @@ namespace CG_6_5_Zodiac_Good
         }
 
 
+        /// <summary>
+        /// logic to determine zodiac sign using birth day and month
+        /// </summary>
+        /// <param name="birthMonth"></param>
+        /// <param name="birthDay"></param>
+        /// <returns>zodiac sign and fortune</returns>
         private static string Zodiac(int birthMonth, int birthDay)
         {
 
-            // if/else if/else statements to determine your zodiac sign based on astrology dates and 
+            // created a method using if/else if/else statements to determine zodiac sign by comparing
+            //birth day and month of user to astrology dates to choose the correct one.
             //return the zodiac sign and fake fortune to print on the console above
             if ((birthMonth == 3 && birthDay >= 21) || (birthMonth == 4 && birthDay <= 19))
                 return "Your Zodiac Sign is Aries. \n Fortune: You will trip on your own shoelace tomorrow at Noon.";
@@ -91,7 +101,7 @@ namespace CG_6_5_Zodiac_Good
 
             else if ((birthMonth == 9 && birthDay >= 23) || (birthMonth == 10 && birthDay <= 22))
                 return "Your Zodiac Sign is Libra. \n " +
-                    "Fortune: You will accidentally leave the lights on some night this week, a lightbulb will burn out, \n" +
+                    "Fortune: You will accidentally leave the lights on at home some night this week, a lightbulb will burn out, \n" +
                     "and you won't notice until you come home late that night and try to turn on the light.";
 
             else if ((birthMonth == 10 && birthDay >= 23) || (birthMonth == 11 && birthDay <= 21))
