@@ -45,34 +45,13 @@ namespace CG_6_5_Zodiac_Good
                 Console.WriteLine("Your next birthday will be on a {0}", nextBDdayofwk.ToString("dddd"));
             }
 
-            var birthMonth = userBirthdate.Month.ToString("MMM");
+            var birthMonth = userBirthdate.Month;
+            
             var birthDay = userBirthdate.Day;
 
 
 
-
-            //if (sign = "Aries")
-            //    Console.WriteLine("Fortune: You will reconnect with an old friend this month.");
-            //else if (sign = "Taurus")
-            //    Console.WriteLine("Fortune: You will trip over your own shoelace tomorrow.");
-            //else if (sign = "Gemini")
-            //    Console.WriteLine("Fortune: You will find a worm in the next apple you eat.");
-            //else if (sign = "Cancer")
-            //else if (sign = "Leo")
-            //else if (sign = "Virgo")
-            //else if (sign = "Libra")
-            //else if (sign = "Scorpio")
-            //else if (sign = "Sagittarius")
-            //else if (sign = "Capricorn")
-            //else if (sign = "Aquarius")
-            //else if (sign = "Pisces")
-
-
-
-
-
-
-
+            Console.WriteLine(Zodiac(birthMonth, birthDay));
 
 
 
@@ -80,39 +59,79 @@ namespace CG_6_5_Zodiac_Good
 
 
 
-
-
-
-
         }
 
 
-        private static string Zodiac(string birthMonth, int birthDay)
+        private static string Zodiac(int birthMonth, int birthDay)
         {
 
+            // if/else if/else statements to determine your zodiac sign based on astrology dates and 
+            //return the zodiac sign and fake fortune to print on the console above
+            if ((birthMonth == 3 && birthDay >= 21) || (birthMonth == 4 && birthDay <= 19))
+                return "Your Zodiac Sign is Aries. \n Fortune: You will trip on your own shoelace tomorrow at Noon.";
 
-            if ((birthMonth == "Mar" && birthDay >= 21) || (birthMonth == "Apr" && (birthDay >= 01 || birthDay <= 19)))
-            {
-                string fortune = "Your Zodiac Sign is Aries. \n Fortune: You will trip on your own shoelace tomorrow at Noon.";
-                return fortune;
-            }
+            else if ((birthMonth == 4 && birthDay >= 20) || (birthMonth == 5 && birthDay <= 20))
+                return "Your Zodiac Sign is Taurus. \n Fortune: You will find a worm in the next apple you eat";
 
-            else if ((birthMonth == "Apr" && birthDay >= 20) || (birthMonth == "May" && (birthDay >= 1 || birthDay <= 20)))
-            {
+            else if ((birthMonth == 5 && birthDay >= 21) || (birthMonth == 6 && birthDay <= 20))
+                return "Your Zodiac Sign is Gemini. \n Fortune: You will lose $137.56 to your best friend in a Poker game this month.";
 
-            }
+            else if ((birthMonth == 6 && birthDay >= 21) || (birthMonth == 7 && birthDay <= 22))
+                return "Your Zodiac Sign is Cancer. \n Fortune: You will pick up the most perfect watermelon " +
+                    "you have ever seen at the supermarket. \n" +
+                    "It will slip out of your hand while you are putting it into your cart, crack, " +
+                    "and the juice of \nthe most perfect watermelon will drip all over the floor.";
 
+            else if ((birthMonth == 7 && birthDay >= 23) || (birthMonth == 8 && birthDay <= 22))
+                return "Your Zodiac Sign is Leo. \n Fortune: You will take a walk, meet a squirrel, and you and the squirrel will have a lovely conversation";
 
+            else if ((birthMonth == 8 && birthDay >= 23) || (birthMonth == 9 && birthDay <= 22))
+                return "Your Zodiac Sign is Virgo. \n " +
+                    "Fortune: You are practically perfect in every single way. You're basically Mary Poppins without an umbrella.";
 
+            else if ((birthMonth == 9 && birthDay >= 23) || (birthMonth == 10 && birthDay <= 22))
+                return "Your Zodiac Sign is Libra. \n " +
+                    "Fortune: You will accidentally leave the lights on some night this week, a lightbulb will burn out, \n" +
+                    "and you won't notice until you come home late that night and try to turn on the light.";
 
+            else if ((birthMonth == 10 && birthDay >= 23) || (birthMonth == 11 && birthDay <= 21))
+                return "You are a Scorpio. \n Fortune: Your cat basically hates you. " +
+                    "He puts up with you because you feed him, \n but really he just thinks you're annoying.";
 
+            else if ((birthMonth == 11 && birthDay >= 22) || (birthMonth == 12 && birthDay <= 21))
+                return "You are a Sagittarius. \n Fortune: Good luck tomorrow! You'll need it!";
 
+            else if ((birthMonth == 12 && birthDay >= 22) || (birthMonth == 1 && birthDay <= 19))
+                return "You are a Capricorn. \n Fortune: Something is going to happen to you today. " +
+                    "Just play along with it, even if it sounds ridiculous.";
 
+            else if ((birthMonth == 1 && birthDay >= 20) || (birthMonth == 2 && birthDay <= 18))
+                return "You are an Aquarius. \n Fortune: You will find a pool and take a swim. Go now. Do it. " +
+                    "Your fortune said you had to. \n It doesn't matter if you forgot your suit, just jump in!";
 
+            else if ((birthMonth == 2 && birthDay >= 19) || (birthMonth == 3 && birthDay <= 20))
+                return "You are a Pisces. \n " +
+                    "Fortune: You have been slowly turning into a fish for the past year. " +
+                    "People might start dangling fishing hooks. \n Be careful and trust no hungry human.";
 
-
-
-
-
+            else
+                return "You have no sign and no fortune. Do you really even exist?";
+ 
+           
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 }
