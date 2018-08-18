@@ -105,7 +105,7 @@ namespace CG_6_5_Zodiac_Good
                     "and you won't notice until you come home late that night and try to turn on the light.";
 
             else if ((birthMonth == 10 && birthDay >= 23) || (birthMonth == 11 && birthDay <= 21))
-                return "You are a Scorpio. \n Fortune: Your cat basically hates you. " +
+                return "You are a Scorpio. \n Fortune: Your cat dislikes you. " +
                     "He puts up with you because you feed him, \n but really he just thinks you're annoying.";
 
             else if ((birthMonth == 11 && birthDay >= 22) || (birthMonth == 12 && birthDay <= 21))
